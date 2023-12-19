@@ -21,7 +21,7 @@ features:
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
 typescript:
-  version: 0.1.0
+  version: 0.2.0
   author: saer
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
