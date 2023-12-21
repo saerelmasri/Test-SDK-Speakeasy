@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 0e4b45a777460870a6529eea3b633cb8
+  docChecksum: 555a795b434c1bf90d3bc820cc776dd3
   docVersion: 1.1.0
-  speakeasyVersion: 1.127.0
-  generationVersion: 2.220.0
+  speakeasyVersion: 1.128.1
+  generationVersion: 2.223.0
 generation:
   comments: {}
   sdkClassName: SDK-Speakeasy
@@ -11,9 +11,9 @@ generation:
   maintainOpenAPIOrder: true
   usageSnippets:
     optionalPropertyRendering: withExample
-  useClassNamesForArrayFields: true
   fixes:
     nameResolutionDec2023: false
+  useClassNamesForArrayFields: true
 features:
   typescript:
     core: 3.3.9
@@ -22,7 +22,7 @@ features:
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
 typescript:
-  version: 0.2.0
+  version: 0.2.1
   author: saer
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true

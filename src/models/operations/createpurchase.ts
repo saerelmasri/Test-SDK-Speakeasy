@@ -7,6 +7,10 @@ import { z } from "zod";
 
 export type CreatePurchaseRequestBody = {
     /**
+     * TEST
+     */
+    test?: string | undefined;
+    /**
      * ISO representation of the package's destination
      */
     destination: string;
@@ -120,6 +124,7 @@ export type CreatePurchaseResponse = {
 /** @internal */
 export namespace CreatePurchaseRequestBody$ {
     export type Inbound = {
+        test?: string | undefined;
         destination: string;
         dataLimitInGB: number;
         startDate: string;
@@ -132,6 +137,7 @@ export namespace CreatePurchaseRequestBody$ {
 
     export const inboundSchema: z.ZodType<CreatePurchaseRequestBody, z.ZodTypeDef, Inbound> = z
         .object({
+            test: z.string().optional(),
             destination: z.string(),
             dataLimitInGB: z.number(),
             startDate: z.string().transform((v) => new RFCDate(v)),
@@ -143,6 +149,7 @@ export namespace CreatePurchaseRequestBody$ {
         })
         .transform((v) => {
             return {
+                ...(v.test === undefined ? null : { test: v.test }),
                 destination: v.destination,
                 dataLimitInGB: v.dataLimitInGB,
                 startDate: v.startDate,
@@ -155,6 +162,7 @@ export namespace CreatePurchaseRequestBody$ {
         });
 
     export type Outbound = {
+        test?: string | undefined;
         destination: string;
         dataLimitInGB: number;
         startDate: string;
@@ -167,6 +175,7 @@ export namespace CreatePurchaseRequestBody$ {
 
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, CreatePurchaseRequestBody> = z
         .object({
+            test: z.string().optional(),
             destination: z.string(),
             dataLimitInGB: z.number(),
             startDate: z.instanceof(RFCDate).transform((v) => v.toString()),
@@ -178,6 +187,7 @@ export namespace CreatePurchaseRequestBody$ {
         })
         .transform((v) => {
             return {
+                ...(v.test === undefined ? null : { test: v.test }),
                 destination: v.destination,
                 dataLimitInGB: v.dataLimitInGB,
                 startDate: v.startDate,
