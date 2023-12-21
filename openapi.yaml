@@ -558,6 +558,9 @@ paths:
             schema:
               type: object
               properties:
+                test:
+                  type: string
+                  description: TEST
                 destination:
                   type: string
                   example: FRA
