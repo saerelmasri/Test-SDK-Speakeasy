@@ -1,7 +1,7 @@
 {
   "type": "commonjs",
   "name": "sdk-speakeasy",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "saer",
   "main": "./index.js",
   "sideEffects": false,
@@ -10,16 +10,10 @@
     "url": "https://github.com/saerelmasri/Test-SDK-Speakeasy.git",
     "directory": "."
   },
-  "exports": {
-    "./package.json": "./package.json",
-    ".": "./cjs/index.js",
-    "./*.js": "./cjs/*.js",
-    "./*": "./cjs/*/index.js"
-  },
   "scripts": {
     "lint": "eslint --max-warnings=0 src",
     "build": "tsc",
-    "prepare": "npm run build && cp -r src/. cjs/. ./"
+    "prepare": "npm run build"
   },
   "keywords": [],
   "peerDependencies": {
