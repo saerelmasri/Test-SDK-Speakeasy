@@ -1,26 +1,12 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 555a795b434c1bf90d3bc820cc776dd3
-  docVersion: 1.1.0
-  speakeasyVersion: 1.129.1
-  generationVersion: 2.223.3
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: SDK-Speakeasy
-  repoURL: https://github.com/saerelmasri/Test-SDK-Speakeasy.git
   maintainOpenAPIOrder: true
   usageSnippets:
     optionalPropertyRendering: withExample
+  useClassNamesForArrayFields: true
   fixes:
     nameResolutionDec2023: false
-  useClassNamesForArrayFields: true
-features:
-  typescript:
-    core: 3.3.12
-    deprecations: 2.81.1
-    flattening: 2.81.1
-    globalSecurity: 2.82.2
-    globalServerURLs: 2.82.1
 typescript:
   version: 0.2.2
   author: saer
@@ -35,10 +21,7 @@ typescript:
       shared: models/components
       webhooks: models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/saerelmasri/Test-SDK-Speakeasy
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: sdk-speakeasy
-  published: true
-  repoSubDirectory: .
   templateVersion: v2
