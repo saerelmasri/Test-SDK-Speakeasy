@@ -419,7 +419,7 @@ export namespace ListPurchasesResponseBody$ {
     export const inboundSchema: z.ZodType<ListPurchasesResponseBody, z.ZodTypeDef, Inbound> = z
         .object({
             purchases: z.array(z.lazy(() => Purchases$.inboundSchema)).optional(),
-            afterCursor: z.string().nullable().optional(),
+            afterCursor: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -436,7 +436,7 @@ export namespace ListPurchasesResponseBody$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ListPurchasesResponseBody> = z
         .object({
             purchases: z.array(z.lazy(() => Purchases$.outboundSchema)).optional(),
-            afterCursor: z.string().nullable().optional(),
+            afterCursor: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {

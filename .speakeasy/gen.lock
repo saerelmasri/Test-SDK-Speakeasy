@@ -4,16 +4,16 @@ management:
   docChecksum: 555a795b434c1bf90d3bc820cc776dd3
   docVersion: 1.1.0
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.2.2
-  configChecksum: 083794bcb2b2fd4cfc2966013167a3fa
+  generationVersion: 2.230.1
+  releaseVersion: 0.2.3
+  configChecksum: 12af6b6455e852c58d22130c4e5c6965
   repoURL: https://github.com/saerelmasri/Test-SDK-Speakeasy.git
   repoSubDirectory: .
   installationURL: https://github.com/saerelmasri/Test-SDK-Speakeasy
   published: true
 features:
   typescript:
-    core: 3.4.1
+    core: 3.4.3
     deprecations: 2.81.1
     flattening: 2.81.1
     globalSecurity: 2.82.2

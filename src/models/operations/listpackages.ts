@@ -248,7 +248,7 @@ export namespace ListPackagesResponseBody$ {
     export const inboundSchema: z.ZodType<ListPackagesResponseBody, z.ZodTypeDef, Inbound> = z
         .object({
             packages: z.array(z.lazy(() => Packages$.inboundSchema)).optional(),
-            afterCursor: z.string().nullable().optional(),
+            afterCursor: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
@@ -265,7 +265,7 @@ export namespace ListPackagesResponseBody$ {
     export const outboundSchema: z.ZodType<Outbound, z.ZodTypeDef, ListPackagesResponseBody> = z
         .object({
             packages: z.array(z.lazy(() => Packages$.outboundSchema)).optional(),
-            afterCursor: z.string().nullable().optional(),
+            afterCursor: z.nullable(z.string()).optional(),
         })
         .transform((v) => {
             return {
